@@ -14,12 +14,12 @@ img {
 
 .rule {
   z-index: 1000;
+  position: absolute;
   border: 2px solid #f17022;
   border-radius: 10px;
   width: 78px;
   margin: 0px;
   opacity: 1;
-  position: absolute;
   left: 207px;
   top: 205px;
 }
@@ -221,9 +221,9 @@ form.searchbox::after {
 
 .date {
   z-index: 1000;
+  position: absolute;
   font-family: "Roboto", sans-serif;
   font-size: 11px;
-  position: absolute;
   left: 208px;
   top: 190px;
   font-weight: 650;
