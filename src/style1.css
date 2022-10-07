@@ -383,3 +383,12 @@ svg[data-icon="wi:day-sunny-overcast"] {
     transform: scale(1.2);
   }
 }
+
+.source-code {
+  text-align: center;
+  
+}
+
+#source-code {
+  text-decoration: none;
+}
