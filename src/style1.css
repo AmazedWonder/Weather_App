@@ -385,8 +385,8 @@ svg[data-icon="wi:day-sunny-overcast"] {
 }
 
 .source-code {
-  text-align: center;
-  
+  padding: 0 auto;
+  margin: 0px;
 }
 
 #source-code {
