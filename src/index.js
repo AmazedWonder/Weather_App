@@ -51,6 +51,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#lo").innerHTML = Math.round(response.data.main.temp_min);
   // document.querySelector("#icon").setAttribute("src" `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   document.getElementById("icon").src = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
+  document.getElementById("icon").alt = `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`;
 }
 
 // cod for and action submit for form input linkd to searchCity

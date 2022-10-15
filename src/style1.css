@@ -20,7 +20,7 @@ img {
   width: 78px;
   margin: 0px;
   opacity: 1;
-  left: 213px;
+  left: 208px;
   top: 205px;
 }
 .container {
@@ -98,8 +98,8 @@ img {
 #icon {
   z-index: 1000;
   position: absolute;
-  top: 65px;
-  right: 152px;
+  top: 80px;
+  right: 250px;
   width: 120px;
   height: 120px;
   transition: all 150ms ease-in-out;
@@ -209,9 +209,9 @@ form.searchbox::after {
   z-index: 1000;
   position: absolute;
   font-family: "Roboto", sans-serif;
-  font-size: 35px;
+  font-size: 50px;
   font-weight: 600;
-  left: 160px;
+  left: 271px;
   top: 105px;
 }
 
@@ -219,7 +219,7 @@ form.searchbox::after {
   z-index: 1000;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .Degree {
@@ -228,8 +228,8 @@ form.searchbox::after {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-size: 8px;
-  left: 170px;
-  top: 150px;
+  left: 292px;
+  top: 160px;
 }
 
 .date {
@@ -237,7 +237,7 @@ form.searchbox::after {
   position: absolute;
   font-family: "Roboto", sans-serif;
   font-size: 11px;
-  left: 213px;
+  /* left: 208px; */
   top: 190px;
   
 }
@@ -247,7 +247,7 @@ form.searchbox::after {
   font-family: "Roboto", sans-serif;
   position: absolute;
   font-size: 12px;
-  left: 238px;
+  left: 235px;
   top: 210px;
   font-weight: 400;
 }
