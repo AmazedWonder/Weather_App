@@ -15,7 +15,7 @@ img {
 .rule {
   z-index: 1000;
   position: absolute;
-  border: 2px solid #f17022;
+  border: 2px solid #b44d08;
   border-radius: 10px;
   width: 78px;
   margin: 0px;
@@ -33,7 +33,7 @@ img {
   margin: 80px auto;
   height: 500px;
   width: 500px;
-  background-color: #f17022;
+  background-color: #b44d08;
   border-radius: 10px;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -104,6 +104,11 @@ img {
   height: 120px;
   transition: all 150ms ease-in-out;
 }
+
+#icon1 {
+  width: 40px;
+  height: 40px;
+}
 /* #icon:hover{
   
 } */
@@ -148,6 +153,7 @@ svg[data-icon="line-md:sunny-outline-twotone-loop"]:hover {
   font-weight: 600;
   border: 1px;
   border-radius: 7px;
+  /* color: #f17022; */
   color: #f17022;
 }
 
@@ -334,17 +340,33 @@ svg[icon="bytesize:location"] {
 .sunny {
   z-index: 1000;
 }
-.row {
+/* .row {
   font-size: 9px;
   font-weight: 600;
-  /* color: aliceblue; */
   padding-left: calc(var(--bs-gutter-x) * 2);
-  /* margin-right: calc(var(--bs-gutter-x) * 1); */
-}
-.col-2 {
+} */
+/* .col-2 {
   width: 14%;
+} */
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
 }
 
+.weather-forecast-date {
+  font-size: 11px;
+  
+}
+
+.weather-forecast-description {
+  font-size: 9px;
+}
+
+.weather-forecast-degree {
+  font-size: 9px;
+}
 svg[data-icon="fluent:weather-sunny-20-filled"] {
   z-index: 1000;
   font-size: 82px;

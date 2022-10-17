@@ -63,7 +63,7 @@
 
 
             <img src="http://openweathermap.org/img/wn/04n@2x.png" id="icon" alt="" class="flexbox">
-            <!-- <img src="http://openweathermap.org/img/wn/01d@2x.png" width="50px" height="50px" alt=""> -->
+            
     
             <h1 class="Temp"><span id="D">29</span>°</h1>
             <h1 class="Degree"> Hi: <span id="hi">33</span>&#176; <br> Lo: <span id="lo">18</span>&#176;</h1> 
@@ -83,20 +83,22 @@
           </div>
     
     
-          <div class="container m-3 ml-1">
+          <div class="weather-forecast">
             <div class="row">
               <div class="col-2">
-                Tue <br>
-               <span class="iconify" data-icon="ic:sharp-wb-sunny"></span> <br>
-                <br>Sunny <br>
+                <div class="weather-forecast-date">
+                  Tue
+
+                </div>
+                
+              <img src="http://openweathermap.org/img/wn/01d@2x.png" id="icon1" alt="">
+                <div class="weather-forecast-description">Sunny</div> <br>
             
-                <br>
-                16&#176;/2&#176;
-             </div>
+                <div class="weather-forecast-degree">16&#176;/2&#176;</div> 
+              </div>
     
-             <div class="col-2">
+             <!-- <div class="col-2">
                 Wed <br>
-               <!-- <span class="iconify" data-icon="fluent:weather-sunny-high-24-filled"></span>  -->
                <span class="iconify" data-icon="wi:day-sunny-overcast"></span><br>
                 Mostly <br> Sunny <br>
                 <br>
@@ -125,7 +127,7 @@
                 Mostly <br> Sunny <br>
                 <br>
                 23&#176;/7&#176;
-             </div>
+             </div> -->
 
              <div class="col-2" id="humidityWind">
               <ul style="padding-left: 2px; margin-left: -32px; list-style: none; margin-top: 10px; font-size: 10px; color: rgb(36, 34, 34);">
