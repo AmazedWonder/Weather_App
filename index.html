@@ -49,7 +49,7 @@
                   
                     <form class="searchbox" id="searchbox" action="/action_page.php" style="margin:auto;max-width:300px">
                       
-                        <input type="text" id="search-text-input" name="search" placeholder= "your location..">
+                        <input type="text" id="search-text-input" name="search" placeholder= "your location.." autocomplete="off">
                           <button type="submit" ><span class="iconify" data-icon="charm:search"></span></button> 
                     </form>
               </div> 
@@ -65,14 +65,14 @@
             <img src="http://openweathermap.org/img/wn/04n@2x.png" id="icon" alt="" class="flexbox">
             <!-- <img src="http://openweathermap.org/img/wn/01d@2x.png" width="50px" height="50px" alt=""> -->
     
-            <h1 class="Temp"><span id="D">29</span><sup>°</sup> </h1>
+            <h1 class="Temp"><span id="D">29</span>°</h1>
             <h1 class="Degree"> Hi: <span id="hi">33</span>&#176; <br> Lo: <span id="lo">18</span>&#176;</h1> 
-            <h1 class="date" id="d-date" style="left: 213px; font-weight: 650;">Mon,AUG 2022 </h1>
+            <h1 class="date" id="d-date" style="left: 209px; font-weight: 650;">Mon, AUG 2022 </h1>
             <hr class="rule">
    
             <h1 class="Measurement">
-              <span> <a href="#" id="F"> <b>&#176;F</b> </a> </span>
-              |<span> <a href="#" id="C"> <b>&#176;C</b> </a> </span>
+              <span> <a href="#" id="C" class="active"> <b>&#176;C</b> </a> </span>
+              |<span> <a href="#" id="F"> <b>&#176;F</b> </a> </span>
             </h1>
             
             <h1 class="Time" id="time">09:35</h1>

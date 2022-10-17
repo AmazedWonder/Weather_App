@@ -43,7 +43,10 @@ timeElement.innerHTML = formatTime(currentTime);
 function displayWeatherCondition(response) {
   // console.log(response.data);
   document.querySelector("#yLocation").innerHTML = response.data.name;
-  document.querySelector("#D").innerHTML = Math.round(response.data.main.temp);
+
+  celsiusTemp = response.data.main.temp;
+
+  document.querySelector("#D").innerHTML = Math.round(celsiusTemp);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("#description").innerHTML = response.data.weather[0].description;
@@ -101,25 +104,39 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 
 // fahrenheit link
-function F(event) {
+function displayFahrenheit(event) {
     event.preventDefault();
+    // remove active class from celsius link
+    celsiusLink.classList.remove("active");
+    // add active class
+    fahrenheitLink.classList.add("active");
+
+    let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
     let Temp = document.querySelector("#D");
-    Temp.innerHTML = "85";
+    Temp.innerHTML = Math.round(fahrenheitTemp);
   }
   
   let fahrenheitLink = document.querySelector("#F");
-  fahrenheitLink.addEventListener("click", F);
+  fahrenheitLink.addEventListener("click", displayFahrenheit);
   
   // celsius
+
+  let celsiusTemp = null;
   
-  function C(event) {
+  function displayCelsius(event) {
     event.preventDefault();
+
+     // remove active class from fahr link
+     fahrenheitLink.classList.remove("active");
+     // add active class
+     celsiusLink.classList.add("active");
+
     let Temp = document.querySelector("#D");
-    Temp.innerHTML = "29";
+    Temp.innerHTML = Math.round(celsiusTemp);
   }
   
   let celsiusLink = document.querySelector("#C");
-  celsiusLink.addEventListener("click", C);
+  celsiusLink.addEventListener("click", displayCelsius);
 
 
 

@@ -210,7 +210,7 @@ form.searchbox::after {
   position: absolute;
   font-family: "Roboto", sans-serif;
   font-size: 50px;
-  font-weight: 600;
+  font-weight: 100;
   left: 271px;
   top: 105px;
 }
@@ -228,7 +228,7 @@ form.searchbox::after {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-size: 8px;
-  left: 292px;
+  left: 290px;
   top: 160px;
 }
 
@@ -262,35 +262,31 @@ form.searchbox::after {
 #F:link,
 #C:link {
   text-decoration: none;
-  color: #000000;
   /* color: #040a44; */
 }
 
-#F:visited,
+/* #F:visited,
 #C:visited {
   text-decoration: none;
   color: #02106b;
-}
+} */
 
 #F:hover,
 #C:hover {
   text-decoration: none;
-  color: #fff;
 }
 
 #F:active,
 #C:active {
   text-decoration: none;
-  /* color: #040a44; */
   color: #f17022;
 }
-/* #F:hover {
-  font-family: "Roboto", sans-serif; */
-/* color: rgb(0, 19, 13); */
-/* color: #040a44;
-  cursor: pointer;
-  font-weight: 900;
-} */
+ /* color: #040a44; */
+.active {
+   color: #000000;
+   cursor: default;
+}
+
 
 #C {
   z-index: 1000;
@@ -298,12 +294,7 @@ form.searchbox::after {
   font-weight: 400;
   font-size: 12px;
 }
-/* #C:hover {
-  font-family: "Roboto", sans-serif;
-  color: rgb(0, 19, 13);
-  cursor: pointer;
-  font-weight: 900;
-} */
+
 
 .Time {
   z-index: 1000;
