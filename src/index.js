@@ -40,7 +40,8 @@ timeElement.innerHTML = formatTime(currentTime);
 
 
 // function for forecast
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -70,6 +71,12 @@ function displayForecast() {
 }
 
 
+function getForecast(coordinates) {
+  let apiKey = "63214c4281922e3bb72fdf12dada7734";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 // function from axios and searchCity
 function displayWeatherCondition(response) {
   // console.log(response.data);
@@ -86,6 +93,9 @@ function displayWeatherCondition(response) {
   // document.querySelector("#icon").setAttribute("src" `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   document.getElementById("icon").src = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
   document.getElementById("icon").alt = `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`;
+
+
+  getForecast(response.data.coord);
 }
 
 // cod for and action submit for form input linkd to searchCity
@@ -115,7 +125,7 @@ function searchCity(city) {
 // default city to b displayd and linkd to handleSubmit
 searchCity("New York");
 
-displayForecast();
+// displayForecast();
 
 function searchLocation(position) {
   let apiKey = "8a582b67c117653fdcad72d407d325fe";
