@@ -38,22 +38,22 @@
           
           <div class="background">
             
-          <div class="Circle1"></div>
+           <div class="Circle1"></div>
          
-          <div class="Circle2"></div>
-          <div class="Circle3"></div>
-          <div class="content">
+           <div class="Circle2"></div>
+           <div class="Circle3"></div>
+           <div class="content">
             <h1 class="Location display"> Right now in 
               <div style="display: inline-block">
   
                   
                     <form class="searchbox" id="searchbox" action="/action_page.php" style="margin:auto;max-width:300px">
                       
-                        <input type="text" id="search-text-input" name="search" placeholder= "your location.." autocomplete="off">
+                        <input type="text" id="search-text-input" name="search" placeholder= "your location..." autocomplete="off">
                           <button type="submit" ><span class="iconify" data-icon="charm:search"></span></button> 
                     </form>
               </div> 
-              <br><span id="description" style="font-size: 15px;"> Sunny </span>
+              <div id="description" style="font-size: 15px;"> Sunny </div>
             </h1>
   
       
@@ -67,7 +67,7 @@
     
             <h1 class="Temp"><span id="D">29</span>°</h1>
             <h1 class="Degree"> Hi: <span id="hi">33</span>&#176; <br> Lo: <span id="lo">18</span>&#176;</h1> 
-            <h1 class="date" id="d-date" style="left: 209px; font-weight: 650;">Mon, AUG 2022 </h1>
+            <h1 class="date" id="d-date" style="left: 209px; font-weight: 650; position: absolute;"></h1>
             <hr class="rule">
    
             <h1 class="Measurement">
@@ -83,8 +83,8 @@
           </div>
     
     
-          <div class="weather-forecast">
-            <div class="row">
+          <div class="weather-forecast" id="forecast">
+            <!-- <div class="row">
               <div class="col-2">
                 <div class="weather-forecast-date">
                   Tue
@@ -92,71 +92,37 @@
                 </div>
                 
               <img src="http://openweathermap.org/img/wn/01d@2x.png" id="icon1" alt="">
-                <div class="weather-forecast-description">Sunny</div> <br>
+                <div class="weather-forecast-description">Sunny</div>
             
-                <div class="weather-forecast-degree">16&#176;/2&#176;</div> 
+                <div class="weather-forecast-degree">16&#176;/2&#176;</div>  -->
               </div>
-    
-             <!-- <div class="col-2">
-                Wed <br>
-               <span class="iconify" data-icon="wi:day-sunny-overcast"></span><br>
-                Mostly <br> Sunny <br>
-                <br>
-                 23&#176;/3&#176;
-             </div>
-    
-             <div class="col-2">
-                Thu <br>
-               <span class="iconify" data-icon="ion:partly-sunny"></span><br>
-                Partly <br>Cloudy <br>
-                <br>
-                22&#176;/7&#176;
-             </div>
-    
-             <div class="col-2">
-                Fri <br>
-               <span class="iconify" data-icon="wi:day-sunny-overcast"></span><br>
-                Mostly <br> Sunny <br>
-                <br>
-                25&#176;/7&#176;
-             </div>
-    
-             <div class="col-2">
-                Sat <br>
-               <span class="iconify" data-icon="wi:day-sunny-overcast"></span><br>
-                Mostly <br> Sunny <br>
-                <br>
-                23&#176;/7&#176;
-             </div> -->
-
-             <div class="col-2" id="humidityWind">
-              <ul style="padding-left: 2px; margin-left: -32px; list-style: none; margin-top: 10px; font-size: 10px; color: rgb(36, 34, 34);">
-                <li>
-                  Humidity: <span id="humidity">77</span>%
-                </li>
-                <li>
-                  Wind: <span id="wind"> 8</span> km/h
-                </li>
-              </ul>
-             </div>
     
              
             </div>
             
           </div>
-           
+          <div class="col-2" id="humidityWind">
+            <ul style="z-index: 1000; list-style: none; margin-top: 10px; font-size: 14px; color: aliceblue; position: absolute; top: 76px; left: 415px; ">
+              <li>
+                Humidity: <span id="humidity">77</span>%
+              </li>
+              <li>
+                Wind: <span id="wind"> 8</span>km/h
+              </li>
+            </ul>
+           </div> 
     
         </div>
     
       
-      </div>
+    </div>
 
       <p class="source-code" style="font-size: 10px; font-weight: bold; position: absolute; left: 430px; bottom: 25px;"> 
         <a href="https://github.com/AmazedWonder/Weather_App" target="_blank" id="source-code">
           Open-source code
         </a> by Perpetual Okorie </p>   
 
-      <script src="src/index.js" > </script> <div class="container">
+      <script src="src/index.js" > </script> 
   
 </body>
 

@@ -39,6 +39,37 @@ if (minutes < 10) {
 timeElement.innerHTML = formatTime(currentTime);
 
 
+// function for forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Fri", "Sat","Sun", "Mon", "Tue", ];
+  days.forEach(function (day) {
+    forecastHTML = forecastHTML + `
+  
+              <div class="col-2">
+                <div class="weather-forecast-date">
+                  ${day}
+
+                </div>
+                
+              <img src="http://openweathermap.org/img/wn/01d@2x.png" id="icon1" alt="">
+                <div class="weather-forecast-description">Sunny</div>
+            
+                <div class="weather-forecast-degree">16&#176;/2&#176;</div> </img>
+              </div>
+   
+    `;
+  });
+  
+
+    forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+  
+}
+
+
 // function from axios and searchCity
 function displayWeatherCondition(response) {
   // console.log(response.data);
@@ -84,6 +115,8 @@ function searchCity(city) {
 // default city to b displayd and linkd to handleSubmit
 searchCity("New York");
 
+displayForecast();
+
 function searchLocation(position) {
   let apiKey = "8a582b67c117653fdcad72d407d325fe";
    
@@ -122,6 +155,7 @@ function displayFahrenheit(event) {
   // celsius
 
   let celsiusTemp = null;
+
   
   function displayCelsius(event) {
     event.preventDefault();
