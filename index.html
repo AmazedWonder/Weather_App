@@ -66,8 +66,8 @@
             
     
             <h1 class="Temp"><span id="D">29</span>°</h1>
-            <h1 class="Degree"> Hi: <span id="hi">33</span>&#176; <br> Lo: <span id="lo">18</span>&#176;</h1> 
-            <h1 class="date" id="d-date" style="left: 209px; font-weight: 650; position: absolute;"></h1>
+            <h1 class="Degree"> <span id="hi">33</span>&#176; / <span id="lo">18</span>&#176;</h1> 
+            <h1 class="date" id="d-date" style="left: 210px; font-weight: 650; position: absolute;"></h1>
             <hr class="rule">
    
             <h1 class="Measurement">
@@ -81,6 +81,17 @@
            
   
           </div>
+
+          <div class="col-2" id="humidityWind">
+            <ul style="z-index: 1000; list-style: none; font-size: 14px; color: aliceblue; position: absolute; top: 4px; left: -12px; line-height: 2; ">
+              <li>
+                Humidity: <span id="humidity">77</span>%
+              </li>
+              <li>
+                Wind: <span id="wind"> 8</span>km/h
+              </li>
+            </ul>
+           </div> 
     
     
           <div class="weather-forecast" id="forecast">
@@ -101,16 +112,7 @@
             </div>
             
           </div>
-          <div class="col-2" id="humidityWind">
-            <ul style="z-index: 1000; list-style: none; margin-top: 10px; font-size: 14px; color: aliceblue; position: absolute; top: 76px; left: 415px; ">
-              <li>
-                Humidity: <span id="humidity">77</span>%
-              </li>
-              <li>
-                Wind: <span id="wind"> 8</span>km/h
-              </li>
-            </ul>
-           </div> 
+          
     
         </div>
     

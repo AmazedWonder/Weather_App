@@ -38,30 +38,42 @@ if (minutes < 10) {
 
 timeElement.innerHTML = formatTime(currentTime);
 
+// function to change api dt to days
+function formatDt(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 
 // function for forecast
 function displayForecast(response) {
   console.log(response.data.daily);
+
+  let forecastView = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Fri", "Sat","Sun", "Mon", "Tue", ];
-  days.forEach(function (day) {
+  
+  forecastView.forEach(function (forecastDay, index) {
+    if (index < 6) {
     forecastHTML = forecastHTML + `
   
               <div class="col-2">
                 <div class="weather-forecast-date">
-                  ${day}
+                  ${formatDt(forecastDay.dt)}
 
                 </div>
                 
-              <img src="http://openweathermap.org/img/wn/01d@2x.png" id="icon1" alt="">
-                <div class="weather-forecast-description">Sunny</div>
+              <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" id="icon1" alt="">
+                <div class="weather-forecast-description">${forecastDay.weather[0].description}</div>
             
-                <div class="weather-forecast-degree">16&#176;/2&#176;</div> </img>
+                <div class="weather-forecast-degree">${Math.round(forecastDay.temp.max)}&#176;/${Math.round(forecastDay.temp.min)}&#176;</div> </img>
               </div>
    
-    `;
+    `;}
   });
   
 
