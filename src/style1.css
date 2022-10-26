@@ -17,10 +17,10 @@ img {
   position: absolute;
   border: 1px solid #b44d08;
   border-radius: 10px;
-  width: 78px;
+  width: 90px;
   margin: 0px;
   opacity: 1;
-  left: 210px;
+  left: 205px;
   top: 205px;
 }
 .container {
@@ -153,7 +153,6 @@ svg[data-icon="line-md:sunny-outline-twotone-loop"]:hover {
   font-weight: 600;
   border: 1px;
   border-radius: 7px;
-  /* color: #f17022; */
   color: #b44d08;
 }
 
@@ -237,8 +236,8 @@ form.searchbox::after {
   position: absolute;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
-  font-size: 10px;
-  left: 285px;
+  font-size: 11px;
+  left: 278px;
   top: 160px;
 }
 
@@ -274,12 +273,6 @@ form.searchbox::after {
   text-decoration: none;
 }
 
-/* #F:visited,
-#C:visited {
-  text-decoration: none;
-  color: #02106b;
-} */
-
 #F:hover,
 #C:hover {
   text-decoration: none;
@@ -290,7 +283,7 @@ form.searchbox::after {
   text-decoration: none;
   color: #f17022;
 }
- /* color: #040a44; */
+
 .active {
    color: #000000;
    cursor: default;
@@ -336,33 +329,10 @@ svg[icon="bytesize:location"] {
   top: 40px;
 }
 
-/* .sunny {
-  z-index: 1000;
-} */
-/* .row {
-  font-size: 9px;
-  font-weight: 600;
-  padding-left: calc(var(--bs-gutter-x) * 2);
-} */
-/* .col-2 {
-  width: 14%;
-} */
-
-/* #humidityWind {
-  padding-left: 2px;
-  margin-left: -32px;
-  list-style: none;
-  margin-top: 10px;
-  font-size: 10px;
-  color: rgb(36, 34, 34);
-} */
-
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
   font-weight: bold;
-  column-gap: 10px;
-  margin-left: none;
 }
 
 .weather-forecast-date {
@@ -379,48 +349,7 @@ svg[icon="bytesize:location"] {
 .weather-forecast-degree {
   font-size: 9px;
 }
-svg[data-icon="fluent:weather-sunny-20-filled"] {
-  z-index: 1000;
-  font-size: 82px;
-  position: absolute;
-  top: 90px;
-  right: 180px;
-  color: #ecbc03;
-  transition: all 150ms ease-in-out;
-}
-svg[data-icon="fluent:weather-sunny-20-filled"]:hover {
-  font-size: 85px;
-}
 
-svg[data-icon="ic:sharp-wb-sunny"] {
-  z-index: 1000;
-  color: #ecbc03;
-  font-size: 20px;
-}
-
-svg[data-icon="fluent:weather-sunny-high-24-filled"] {
-  z-index: 1000;
-  color: #ecbc03;
-  font-size: 20px;
-}
-
-svg[data-icon="ion:partly-sunny"] {
-  z-index: 1000;
-  color: #eff3fb;
-  font-size: 20px;
-}
-
-svg[data-icon="wi:day-sunny-overcast"] {
-  z-index: 1000;
-  color: #eff3fb;
-  font-size: 20px;
-}
-
-@keyframes enlarge {
-  50% {
-    transform: scale(1.2);
-  }
-}
 
 .source-code {
   padding: 0 auto;
@@ -430,4 +359,10 @@ svg[data-icon="wi:day-sunny-overcast"] {
 
 #source-code {
   text-decoration: none;
+}
+
+@keyframes enlarge {
+  50% {
+    transform: scale(1.2);
+  }
 }

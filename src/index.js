@@ -55,7 +55,7 @@ function displayForecast(response) {
   let forecastView = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="row" style="width: 360px; margin-left: 65px;">`;
   
   forecastView.forEach(function (forecastDay, index) {
     if (index < 6) {
@@ -91,7 +91,7 @@ function getForecast(coordinates) {
 
 // function from axios and searchCity
 function displayWeatherCondition(response) {
-  // console.log(response.data);
+ 
   document.querySelector("#yLocation").innerHTML = response.data.name;
 
   celsiusTemp = response.data.main.temp;
@@ -110,7 +110,7 @@ function displayWeatherCondition(response) {
   getForecast(response.data.coord);
 }
 
-// cod for and action submit for form input linkd to searchCity
+// for and action submit for form input linkd to searchCity
 function handleSubmit(event) {
   // debugger;
     event.preventDefault();
@@ -125,12 +125,12 @@ function handleSubmit(event) {
 let searchbox = document.querySelector("#searchbox");
 searchbox.addEventListener("submit", handleSubmit);
 
-// cod for searchCity to get to api and link to displayWeatherCondition
+// for searchCity to get to api and link to displayWeatherCondition
 function searchCity(city) {
   let apiKey = "8a582b67c117653fdcad72d407d325fe";
    
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-   // console.log(axios);
+   
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
@@ -143,7 +143,7 @@ function searchLocation(position) {
   let apiKey = "8a582b67c117653fdcad72d407d325fe";
    
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  //  console.log(apiUrl);
+  
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
