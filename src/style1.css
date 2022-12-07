@@ -353,13 +353,23 @@ svg[icon="bytesize:location"] {
 
 .source-code {
   padding: 0 auto;
-  margin: 0px;
+  /* margin: 0px; */
   position: absolute;
 }
 
 #source-code {
   text-decoration: none;
 }
+@media (max-width: 980px) {
+  .source-code{
+    display: none;
+  }
+}
+@media (min-width: 1280px) {
+  .source-code{
+    display: none;
+  }
+  }
 
 @keyframes enlarge {
   50% {
