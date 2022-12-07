@@ -365,11 +365,11 @@ svg[icon="bytesize:location"] {
     display: none;
   }
 }
-@media (min-width: 1280px) {
+/* @media (min-width: 1280px) {
   .source-code{
     display: none;
   }
-  }
+  } */
 
 @keyframes enlarge {
   50% {
