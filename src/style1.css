@@ -25,12 +25,14 @@ img {
 }
 .container {
   max-width: 500px;
+  padding: 0;
 }
 .container1 {
   overflow: hidden;
   z-index: 10;
   position: relative;
   margin: 80px auto;
+  margin-bottom: 0px;
   height: 500px;
   width: 500px;
   background-color: #b44d08;
@@ -171,7 +173,6 @@ form.searchbox input[type="text"] {
   font-size: 11.5px;
   font-weight: 900;
   border: none;
-  /* border: 0px solid grey; */
   width: 50%;
   background: inherit;
   box-sizing: border-box;
@@ -221,7 +222,7 @@ form.searchbox::after {
   font-size: 55px;
   font-weight: 100;
   left: 271px;
-  top: 105px;
+  top: 94px;
 }
 
 #D {
@@ -246,7 +247,6 @@ form.searchbox::after {
   position: absolute;
   font-family: "Roboto", sans-serif;
   font-size: 12.5px;
-  /* left: 208px; */
   top: 190px;
   
 }
@@ -350,26 +350,32 @@ svg[icon="bytesize:location"] {
   font-size: 9px;
 }
 
-
-.source-code {
-  padding: 0 auto;
-  /* margin: 0px; */
-  position: absolute;
-}
-
 #source-code {
   text-decoration: none;
+  
 }
-@media (max-width: 980px) {
-  .source-code{
-    display: none;
-  }
+.source-code {
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  position: static;
+  left: 444px; 
+  bottom: 69px;
 }
-/* @media (min-width: 1280px) {
+
+/* @media (max-width: 768px) {
   .source-code{
-    display: none;
+    left: 168px;
+    bottom: 470px;
+}
+} */
+
+/* @media (min-width: 800px) {
+  .source-code {
+    left: 591px;
+    bottom: 50px;
   }
-  } */
+} */
 
 @keyframes enlarge {
   50% {
